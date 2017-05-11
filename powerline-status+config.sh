@@ -22,6 +22,8 @@ EOF
 cat > ~/.vimrc << EOF
 set laststatus=2
 set t_Co=256
+set number
+set cursorline
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
@@ -44,3 +46,6 @@ export TERM=xterm-256color
 alias tmux='tmux -2'
 [ -z "$TMUX"  ] && { tmux attach || tmux new-session;}
 EOF
+
+# Configure powerline on user level
+mkdir ~/.config/powerline
